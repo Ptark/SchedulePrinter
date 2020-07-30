@@ -7,4 +7,4 @@ print_todays_schedule filters for meeting with todays date and prints them.
 
 For easy use add the following aliases to your .bashrc:
 
-alias today='awk -f path/to/your/script/extract_schedule.awk *.ics *.iCal | awk -f path/to/your/scripts/print_todays_schedule.awk | column -t'
+alias today='find ~/Library/Calendars/ \( -name "*.ics" -o -name "*.iCal" \) -exec awk -f ~/repositories/SchedulePrinter/extract_schedule.awk {} \; | awk -f ~/repositories/SchedulePrinter/print_todays_schedule.awk | column -t'
