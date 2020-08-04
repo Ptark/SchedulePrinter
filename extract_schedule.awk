@@ -43,10 +43,10 @@ BEGIN {
 
 END {
   for (i = 1; i <= cnt; i++) {
-    arr[i] = date_arr[i] " " start_arr[i] " " end_arr[i] " " summary_arr[i] " " location_arr[i];
+    arr[i] = date_arr[i] "|" start_arr[i] "|" end_arr[i] "|" summary_arr[i] "|" location_arr[i];
   }
   asort(arr);
-  arr[0] = "Datum Anfang Ende Termin Ort"
+  arr[0] = "Datum|Anfang|Ende|Termin|Ort"
   for (key in arr) {
     print arr[key]
   }
